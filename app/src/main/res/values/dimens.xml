@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="H_sp">5dp</dimen>
+    <dimen name="V_sp">5dp</dimen>
+    <dimen name="mgnTop">40dp</dimen>
+    <dimen name="btn_W">300dp</dimen>
+    <dimen name="btn_W2">150dp</dimen>
+    <dimen name="mgnBottom">20dp</dimen>
+    <dimen name="img_WH">100dp</dimen>
+</resources>

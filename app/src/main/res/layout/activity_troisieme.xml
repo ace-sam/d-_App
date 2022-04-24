@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Troisieme_Activity">
+
+
+    <Button
+        android:id="@+id/btnLancer"
+        android:layout_width="@dimen/btn_W"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="lancer"
+        android:text="@string/lancer" />
+
+    <Button
+        android:id="@+id/btnNew"
+        android:layout_width="@dimen/btn_W"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="nouveaux"
+        android:text="@string/newd" />
+
+    <Button
+        android:id="@+id/btnRetour"
+        android:layout_width="@dimen/btn_W"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="GetBack"
+        android:text="@string/prec" />
+
+    <Button
+        android:id="@+id/btnQuitter"
+        android:layout_width="@dimen/btn_W"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="quitter"
+        android:text="@string/quitter" />
+
+    <GridView
+        android:id="@+id/ResultsGV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/mgnTop"
+        android:horizontalSpacing="@dimen/H_sp"
+        android:numColumns="2"
+        android:verticalSpacing="@dimen/V_sp" />
+
+</LinearLayout>

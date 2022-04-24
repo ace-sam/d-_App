@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">De_application</string>
+    <string name="prec">Précédent</string>
+    <string name="suiv">Suivant</string>
+    <string name="saisir1">Saisir le nombre des dés</string>
+    <string name="lancer">Lancer</string>
+    <string name="newd">nouveaux dés</string>
+    <string name="quitter">Quitter</string>
+</resources>
