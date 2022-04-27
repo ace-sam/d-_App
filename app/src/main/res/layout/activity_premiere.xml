@@ -48,8 +48,17 @@
             android:onClick="suivant"
             android:text="@string/suiv"
             android:visibility="gone" />
+
     </LinearLayout>
 
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:onClick="selectedDices"
+        android:text="Dernier selection" />
 
     <ScrollView
         android:layout_width="match_parent"

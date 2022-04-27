@@ -144,7 +144,7 @@ public class Deuxieme_Activity extends AppCompatActivity {
     public void onBackPressed() {
         if(StaticVariables.Page==0){
             startActivity(new Intent(Deuxieme_Activity.this, Premiere_Activity.class));
-            StaticVariables.Page=0;
+            //StaticVariables.Page=0;
         }
         else {
             startActivity(new Intent(Deuxieme_Activity.this, Deuxieme_Activity.class));

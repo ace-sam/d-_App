@@ -4,12 +4,19 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 public class Premiere_Activity extends AppCompatActivity {
 
@@ -89,5 +96,22 @@ public class Premiere_Activity extends AppCompatActivity {
                 .setNegativeButton(android.R.string.ok, null)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
+    }
+
+    public void selectedDices(View view) {
+
+        SharedPreferences sharedPreferences = getSharedPreferences("dés sélectionnée", MODE_PRIVATE);
+
+        String json = sharedPreferences.getString("dés", null);
+        if (json!=null) {
+            Gson gson = new Gson();
+            Type type = new TypeToken<ArrayList<deInfo>>() {}.getType();
+            StaticVariables.LesDes = gson.fromJson(json, type);
+
+            if (StaticVariables.LesDes != null)
+                startActivity(new Intent(Premiere_Activity.this, Troisieme_Activity.class));
+
+        }
+        else Toast.makeText(Premiere_Activity.this, "pas de sélection", Toast.LENGTH_SHORT).show();
     }
 }

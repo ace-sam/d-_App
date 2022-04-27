@@ -3,9 +3,12 @@ package com.example.myapplication.de_application;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
+
+import com.google.gson.Gson;
 
 import java.util.Random;
 
@@ -17,6 +20,14 @@ public class Troisieme_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_troisieme);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("dés sélectionnée", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        Gson gson = new Gson();
+        String json = gson.toJson(StaticVariables.LesDes);
+        editor.putString("dés", json);
+        editor.apply();
     }
 
     // Button Lancer
